@@ -4,7 +4,6 @@ import 'package:cop_citizen/emergency_helplines.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreenButton extends StatelessWidget {
-  
   void selectComplaint(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
@@ -14,6 +13,7 @@ class CategoryScreenButton extends StatelessWidget {
       ),
     );
   }
+
   void selectTrackStatus(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
@@ -23,6 +23,7 @@ class CategoryScreenButton extends StatelessWidget {
       ),
     );
   }
+
   void selectRequests(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
@@ -32,6 +33,7 @@ class CategoryScreenButton extends StatelessWidget {
       ),
     );
   }
+
   void selectEmergencyContacts(BuildContext ctx) {
     Navigator.of(ctx).push(
       MaterialPageRoute(
@@ -62,31 +64,41 @@ class CategoryScreenButton extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-           FlatButton.icon(
-             onPressed: () => selectComplaint(context),
-             
-                        child: RaisedButton(
-               padding: EdgeInsets.all(0.0),
-               onPressed: () {},
+          FlatButton.icon(
+            onPressed: () => selectComplaint(context),
+            icon: RaisedButton(
+              padding: EdgeInsets.all(0.0),
+              onPressed: () {},
               child: Text('Lodge a Complaint'),
+            ),
           ),
-           ),
+          SizedBox(
+            height: 5,
+          ),
           RaisedButton(
-             padding: EdgeInsets.all(0.0),
-             onPressed: () {},
+            padding: EdgeInsets.all(0.0),
+            onPressed: () {},
             child: Text('Track Status'),
           ),
+          SizedBox(
+            height: 5,
+          ),
           RaisedButton(
-             padding: EdgeInsets.all(0.0),
-             onPressed: () => selectViewCriminalPage(context),
+            padding: EdgeInsets.all(0.0),
+            onPressed: () => selectViewCriminalPage(context),
             child: Text('View Criminals'),
           ),
+          SizedBox(
+            height: 5,
+          ),
           RaisedButton(
-             padding: EdgeInsets.all(0.0),
-             onPressed: () => selectEmergencyContacts(context),
+            padding: EdgeInsets.all(0.0),
+            onPressed: () => selectEmergencyContacts(context),
             child: Text('Emergency Contacts'),
           ),
-          
+          SizedBox(
+            height: 5,
+          ),
         ],
       ),
     );
