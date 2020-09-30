@@ -26,7 +26,7 @@ class CategoryComplaintPage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          title: Text('Lodge a Complaint'),
+          title: Text('Complaint Registration'),
         ),
         body: CategoryComplaintPageStateful(),
     );
@@ -70,7 +70,7 @@ class _CategoryComplaintPageStateful
             items: <String>[
               'Select Police Commissionerate',
               'Hyderabad',
-              'Cyberbad',
+              'Cyberabad',
               'Rachakonda',
               'Warangal',
               'Siddipet',
@@ -79,6 +79,9 @@ class _CategoryComplaintPageStateful
               'Nizamabad',
               'Khammam',
               'Nalgonda',
+              'Jagtial',
+              'Korutla',
+              'Metpally'
             ].map<DropdownMenuItem<String>>((String value) {
               return DropdownMenuItem<String>(
                 value: value,
@@ -119,11 +122,13 @@ class _CategoryComplaintPageStateful
           ),
           TextField(
             decoration: InputDecoration(
+              helperText: 'Ex: Hyderabad',
               labelText: 'Place of Incident',
             ),
           ),
           TextField(
             decoration: InputDecoration(
+              helperText: 'Ex: Have seen him parking at no parking area',
               labelText: 'Description',
             ),
           ),
